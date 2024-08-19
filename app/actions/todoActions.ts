@@ -31,3 +31,20 @@ export async function deleteTodo(formData: FormData) {
     console.log(error);
   }
 }
+
+export async function finishTodo(formData: FormData) {
+  const postId = formData.get("postId") as string;
+  try {
+    await prisma.todo.update({
+      where: {
+        id: postId,
+      },
+      data: {
+        isCompleted: true,
+      },
+    });
+    revalidatePath("/");
+  } catch (error) {
+    console.log(error);
+  }
+}

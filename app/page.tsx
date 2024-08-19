@@ -11,6 +11,9 @@ const getData = async () => {
       title: true,
       isCompleted: true,
     },
+    where: {
+      isCompleted: false,
+    },
     orderBy: {
       id: "desc",
     },
