@@ -13,9 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Todo {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  isCompleted Boolean
+  isCompleted Boolean  @default(false)
   createdAt   DateTime @default(now())
 }
