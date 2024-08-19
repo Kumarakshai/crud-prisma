@@ -1,5 +1,6 @@
 import { AddTodo } from "./components/AddTodo";
 import { PrismaClient } from "@prisma/client";
+import Todo from "./components/Todo";
 
 const prisma = new PrismaClient();
 
@@ -30,7 +31,10 @@ export default async function Home() {
       </div>
       <div>
         {data.map((todo, key) => (
-          <li key={key}>{todo.title}</li>
+          <div key={key}>
+            {/* <li key={key}>{todo.title}</li> */}
+            <Todo todo={todo} />
+          </div>
         ))}
       </div>
     </div>
