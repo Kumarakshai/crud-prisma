@@ -2,7 +2,7 @@
 import React from "react";
 import { finishTodo } from "../actions/todoActions";
 
-const FinishTodo = ({ todo }) => {
+const FinishTodo = ({ todo }: any) => {
   return (
     <div>
       <form

@@ -2,7 +2,10 @@
 import React from "react";
 import { deleteTodo } from "../actions/todoActions";
 
-const DeleteTodo = ({ todo }) => {
+interface DeleteTodoProps {
+  todo: any;
+}
+const DeleteTodo = ({ todo }: DeleteTodoProps) => {
   return (
     <div>
       <form
