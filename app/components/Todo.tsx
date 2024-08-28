@@ -2,7 +2,7 @@ import React from "react";
 import DeleteTodo from "./DeleteTodo";
 import FinishTodo from "./FinishTodo";
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo }: any) => {
   return (
     <div className="flex justify-between uppercase gap-5 p-2">
       {todo.title}
